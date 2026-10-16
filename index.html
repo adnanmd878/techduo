@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ECHO SHIFT — OUTSMART YOUR PAST</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- UI Overlays -->
+    <div id="ui">
+        <div id="menu" class="screen active">
+            <h1>Echo Shift</h1>
+            <button class="ui-btn" id="playBtn">Play</button>
+            <button class="ui-btn" id="howBtn">How to Play</button>
+            <button class="ui-btn" id="levelsBtn">Select Level</button>
+        </div>
+        <div id="howto" class="screen">
+            <h2>How to Play</h2>
+            <p>W/A/S/D or Arrow keys – move</p>
+            <p>R – start/stop recording</p>
+            <p>Space – pause/resume</p>
+            <p>Reset – restart current puzzle</p>
+            <button class="ui-btn" id="backFromHow">Back</button>
+        </div>
+        <div id="levelSelect" class="screen">
+            <h2>Select Level</h2>
+            <div id="levelButtons"></div>
+            <button class="ui-btn" id="backFromLevels">Back</button>
+        </div>
+        <div id="hud" class="overlay hidden">
+            <div>Ghosts: <span id="ghostCount">0</span></div>
+            <div>Recording: <span id="recTimer">0.0</span>s</div>
+            <button class="ui-btn" id="resetBtn">Reset</button>
+            <button class="ui-btn" id="pauseBtn">Pause</button>
+        </div>
+        <div id="levelComplete" class="screen">
+            <h2>Level Complete!</h2>
+            <button class="ui-btn" id="nextLevelBtn">Next Level</button>
+        </div>
+        <div id="victory" class="screen">
+            <h1>Congratulations!</h1>
+            <p>You have mastered time.</p>
+            <button class="ui-btn" id="restartGameBtn">Play Again</button>
+        </div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>

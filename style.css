@@ -1,0 +1,86 @@
+/* style.css */
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: #0a0a1a; /* dark navy */
+    color: #fff;
+}
+
+#gameCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #0a0a1a; /* fallback */
+    pointer-events: none; /* allow UI overlay clicks */
+    z-index: 0;
+}
+
+#ui {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* UI elements decide */
+    z-index: 10; /* ensure UI is on top of canvas */
+}
+
+.screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(20,20,40,0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,255,255,0.4);
+    pointer-events: auto;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.screen.active {
+    opacity: 1;
+}
+
+.ui-btn {
+    background: #0f0f2f;
+    color: #0ff;
+    border: 2px solid #0ff;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.2s, transform 0.1s;
+    pointer-events: auto;
+}
+
+.ui-btn:hover {
+    background: #0ff;
+    color: #000;
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 15px;
+    background: rgba(0,0,0,0.5);
+    padding: 8px 12px;
+    border-radius: 6px;
+    pointer-events: auto;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Simple neon glow for future elements (will be drawn via canvas) */
